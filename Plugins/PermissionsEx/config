@@ -1,1 +1,2829 @@
--=}*{=- Config Will Be Added After Upload of Jar -=}*{=-
+groups:
+
+  player:
+    inheritance: []
+    permissions:
+    - -bukkit.command.*
+    - -worldedit.*
+    - -serversigns.updatenotification
+    - -essentials.unlimited.item-all
+    - -essentials.itemspawn.item-all
+    - -essentials.powertool
+    options:
+      default: false
+      rank: '1'
+      prefix: ''
+      rank-ladder: alternate
+      suffix: ''
+  adminuser:
+    inheritance: []
+    permissions:
+    - -modifyworld.damage.deal.*
+    - -modifyworld.damage.take.*
+    - -modifyworld.mobtarget.*
+    - -modifyworld.tame.*
+    - essentials.silentjoin
+    - essentials.helpop.receive
+    - -tcfactions.kit.fullplayer
+    - essentials.silentjoin.vanish
+    - -essentials.tempban.unlimited
+    options:
+      default: false
+      rank: '2'
+      prefix: '&8[&c&lAdminuser&8] '
+      rank-ladder: alternate
+      suffix: ''
+  superuser:
+    inheritance: []
+    permissions:
+    - essentials.*
+    - worldedit.*
+    - bukkit.command.*
+    - -bukkit.command.op.take
+    - -bukkit.command.op.give
+    - ctplus.bypass.*
+    - -modifyworld.damage.deal.*
+    - -modifyworld.damage.take.*
+    - -modifyworld.mobtarget.*
+    - -modifyworld.interact.*
+    - -modifyworld.tame.*
+    - -essentials.tempban.unlimited
+    - -essentials.powertool
+    options:
+      default: false
+      rank: '3'
+      rank-ladder: alternate
+      suffix: '&8[&4&lSuperuser&8] '
+  ultrauser:
+    inheritance: []
+    permissions:
+    - '*'
+    - bukkit.command.*
+    - -bukkit.command.op.take
+    - -bukkit.command.op.give
+    - -permissions.*
+    options:
+      default: false
+      rank: '4'
+      rank-ladder: alternate
+      suffix: '&8[a&lSuperuser&8] '
+  member:
+    inheritance:
+    - player
+    permissions:
+    - essentials.mail
+    - essentials.mail.send
+    - essentials.mail.read
+    - essentials.mail.clear
+    - essentials.afk
+    - essentials.signs.use.disposal
+    - essentials.warp
+    - essentials.warp.list
+    - essentials.tpahere
+    - essentials.ignore
+    - essentials.balance
+    - essentials.balance.others
+    - essentials.balancetop
+    - essentials.helpop
+    - essentials.home
+    - essentials.pay
+    - iConomy.holdings
+    - iConomy.payment
+    - iConomy.holdings.others
+    - essentials.sethome
+    - essentials.signs.use.buy
+    - essentials.signs.use.trade
+    - essentials.signs.use.sell
+    - essentials.tpa
+    - essentials.help
+    - essentials.msg
+    - essentials.chat
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.kit
+    - modifyworld.*
+    - serversigns.use
+    - referral.redeem
+    - referral.create
+    - referral.info
+    options:
+      default: true
+      prefix: '&8[&9Member&8] '
+      suffix: ''
+      rank: '1'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+      purge:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+        - -essentials.tpa
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+        - -essentials.home
+        - -essentials.sethome
+      normaltcfactions:
+        inheritance: []
+        permissions:
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - tcfactions.kit.fullplayer 
+        - essentials.kits.member
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions:
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - tcfactions.kit.fullplayer 
+        - essentials.kits.member
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions:
+        - tcfactions.kit.fullplayer 
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - essentials.kits.member
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions:
+        - tcfactions.kit.fullplayer 
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - essentials.kits.member
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions:
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - tcfactions.kit.fullplayer 
+        - essentials.kits.member
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions:
+        - chestshop.shop.buy
+        - chestshop.shop.sell
+        - essentials.kits.member
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+      gta:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+      ctf:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      skywars:      
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      skyblock:
+        inheritance: []
+        permissions:
+        - essentials.kits.member
+      spleef:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      hungergames:
+        inheritance: []
+        permissions: 
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      bedwars:
+        inheritance: []
+        permissions: 
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      parkour:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+        - -modiyfworld.damage.take.*
+        - -modifyworld.damage.deal.*
+        - -modifyworld.mobtarget.*
+      battlearenas:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions:
+        - essentials.afk.kickexempt
+      stafflounge:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      kingofthehill:
+        inheritance: []
+        permissions:        
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions:
+        - essentials.afk.kickexempt
+      ecocraft:
+        inheritance: []
+        permissions:
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      hub:
+        inheritance: []
+        permissions:
+        - essentials.afk.kickexempt
+        - -modifyworld.damage.take.*
+        - -modifyworld.damage.deal.*
+        - -modifyworld.tame.*
+        - -essentials.tpa
+        - -essentials.home
+        - -essentials.sethome
+        - -essentials.spawn
+        - -essentials.tpaccept
+        - -essentials.tpdeny
+      kitpvp:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+  member+:
+    inheritance:
+    - member
+    permissions:
+    - essentials.tpahere
+    - essentials.afk
+    - essentials.afk.auto
+    - essentials.sethome.multiple.member+
+    options:
+      default: false
+      prefix: '&8[&6Member+&8] '
+      suffix: ''
+      rank: '2'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      purge:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - essentials.kits.member+
+      normaltcfactions:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - essentials.kits.member+
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      gta:
+        inheritance: []
+        permissions:
+        - essentials.kits.member+
+      ctf:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      skywars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      skyblock:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+        - essentials.kits.member+
+      spleef:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      hungergames:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      bedwars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      parkour:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      battlearenas:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      kingofthehill:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      hub:
+        inheritance: []
+        permissions: 
+        - -essentials.sethome.multiple.member+
+        - -essentials.tpahere
+      kitpvp:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member+
+  member++:
+    inheritance:
+    - member+
+    permissions:
+    - essentials.feed
+    - essentials.sethome.multiple.member++
+    - essentials.msg.format
+    options:
+      default: false
+      prefix: '&8[&2Member++&8]'
+      suffix: ''
+      rank: '3'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      purge:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+        - essentials.kits.member++
+      normaltcfactions:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+        - essentials.kits.member++
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      gta:
+        inheritance: []
+        permissions:
+        - essentials.kits.member++
+      ctf:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      skywars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      skyblock:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+        - essentials.kits.member++
+      spleef:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      hungergames:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      bedwars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      parkour:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      battlearenas:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      kingofthehill:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+      hub:
+        inheritance: []
+        permissions: 
+        - -essentials.sethome.multiple.member++
+      kitpvp:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.member++
+  lord:
+    inheritance:
+    - member++
+    permissions:
+    - essentials.heal
+    - essentials.sethome.multiple.lord
+    options:
+      default: false
+      prefix: '&7[&9Lord&7]'
+      suffix: ''
+      rank: '4'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions:
+        - essentials.sethome.multiple.lord
+        - essentials.kits.lord
+      purge:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+        - essentials.kits.lord
+      normaltcfactions:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+        - essentials.kits.lord
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      gta:
+        inheritance: []
+        permissions:
+        - essentials.kits.lord
+      ctf:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      skywars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      skyblock:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+        - essentials.kits.lord
+      spleef:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      hungergames:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      bedwars:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      parkour:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      battlearenas:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      kingofthehill:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord
+      hub:
+        inheritance: []
+        permissions: 
+        - -essentials.sethome.multiple.lord
+      kitpvp:
+        inheritance: []
+        permissions:
+        - -essentials.sethome.multiple.lord    
+  helper:
+    inheritance:
+    - lord
+    permissions:
+    - essentials.mute
+    - -essentials.mute.exempt
+    - essentials.kick
+    - -essentials.kick.exempt
+    - essentials.msg.url
+    - essentials.chat.color
+    - essentials.chat.format	
+    options:
+      default: false
+      prefix: '&8[&eHelper&8] '
+      suffix: ''
+      rank: '5'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      murdermystery:
+        inheritance: []
+        permissions:
+      kingofthehill:
+        inheritance: []
+        permissions:
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  juniormoderator:
+    inheritance:
+    - helper
+    permissions:
+    - essentials.enderchest
+    - essentials.enderchest.others
+    - essentials.mute.offline
+    options:
+      default: false
+      prefix: '&8[&3Junior Mod&8] '
+      suffix: ''
+      rank: '6'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  moderator:
+    inheritance:
+    - juniormoderator
+    permissions:
+    - essentials.invsee
+    - -essentials.invsee.preventmodify
+    - essentials.tpo
+    - essentials.teleport.cooldown.bypass
+    options:
+      default: false
+      prefix: '&8[&aMod&8] '
+      suffix: ''
+      rank: '6'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  seniormoderator:
+    inheritance:
+    - moderator
+    permissions:
+    - essentials.god
+    - essentials.fly
+    - essentials.tptoggle
+    options:
+      default: false
+      prefix: '&8[&bSenior Mod&8] '
+      suffix: ''
+      rank: '7'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  headmoderator:
+    inheritance:
+    - seniormoderator
+    permissions:
+    - essentials.god
+    - essentials.fly
+    - essentials.tptoggle
+    - permissions.manage.membership.helper
+    - permissions.manage.membership.juniormoderator
+    - permissions.manage.membership.moderator
+    - permissions.manage.membership.seniormoderator
+    options:
+      default: false
+      prefix: '&8[&6&lHead &c&lMod&8] '
+      suffix: ''
+      rank: '7'
+      rank-ladder: player
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  junioradmin:
+    options:
+      default: false
+      prefix: '&8[&a&lJunior Admin&8] '
+      suffix: ''
+      rank: '1'
+      rank-ladder: admin
+    inheritance:
+    - adminuser	
+    permissions:
+    - essentials.*
+    - -essentials.sudo
+    - -modifyworld.damage.deal.*
+    - -modifyworld.damage.take.*
+    - -modifyworld.mobtarget.*
+    - essentials.balance
+    - essentials.balance.others
+    - essentials.balancetop
+    - essentials.helpop
+    - essentials.home
+    - essentials.pay
+    - iConomy.holdings
+    - iConomy.payment
+    - iConomy.holdings.others
+    - essentials.sethome
+    - essentials.signs.use.buy
+    - essentials.signs.use.trade
+    - essentials.signs.use.sell
+    - essentials.tpa
+    - essentials.help
+    - essentials.msg
+    - essentials.chat
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.kit
+    - modifyworld.*
+    - serversigns.use
+    - referral.redeem
+    - referral.create
+    - referral.info
+    - -modifyworld.tame.*
+    - essentials.silentjoin
+    - -tcfactions.kit.fullplayer
+    - essentials.silentjoin.vanish
+    - -essentials.tempban.unlimited
+    - -essentials.antioch
+    - -essentials.nuke
+    - -essentials.break
+    - -essentials.exp.*
+    - -essentials.exp
+    - -essentials.firework
+    - -essentials.fly.others
+    - -essentials.gamemode.others
+    - -essentials.hat
+    - -essentials.heal.others
+    - -essentials.fly.others
+    - -essentials.god.others
+    - -essentials.*.others
+    - -essentials.book
+    - -essentials.ban
+    - -essentials.ban.*
+    - -essentials.*.exempt
+    - -essentials.*.offline
+    - -essentials.fireball
+    - -essentials.sudo.*
+    - -essentials.sudo
+    - -essentials.*.notify
+    - -essentials.*.preventmodify
+    - -essentials.tree
+    - -essentials.time.set
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+    options:
+      default: false
+      rank: '2'
+      prefix: '&8[&a&lAdmin&8] '
+      rank-ladder: admin
+      suffix: ''
+  admin:
+    options:
+      default: false
+      prefix: '&8[&a&lAdmin&8] '
+      suffix: ''
+      rank: '3'
+      rank-ladder: admin
+    inheritance:
+    - junioradmin	
+    permissions:
+    - essentials.ban
+    - essentials.ban.offline
+  senioradmin:
+    options:
+      default: false
+      prefix: '&8[&c&lSenior &a&lAdmin&8] '
+      suffix: ''
+      rank: '4'
+      rank-ladder: admin
+    inheritance:
+    - admin	
+    permissions:
+    - essentials.ban
+    - essentials.ban.offline
+    - essentials.sudo
+    - essentials.sudo.exempt
+  headadmin:
+    options:
+      default: false
+      prefix: '&8[&6&lHead &a&lAdmin&8] '
+      suffix: ''
+      rank: '5'
+      rank-ladder: admin
+    inheritance:
+    - senioradmin	
+    permissions:
+    - permissions.manage.membership.junioradmin
+    - permissions.manage.membership.admin
+    - permissions.manage.membership.senioradmin
+  co-owner:
+    options:
+      default: false
+      prefix: '&8[&e&lCo &6&lOwner&8] '
+      suffix: ''
+      rank: '6'
+      rank-ladder: admin
+    inheritance:
+    - senioradmin	
+    permissions:
+    - permissions.manage.membership.headadmin
+    - permissions.manage.membership.headmoderator
+    - permissions.manage.membership.headbuilder
+    - permissions.manage.membership.headdeveloper
+    - modifyworld.*
+    worlds:
+      muelthefox:
+        inheritance: []
+        permissions:
+        - modifyworld.*
+      purge:
+        inheritance: []
+        permissions:
+        - modifyworld.*
+  owner:
+    options:
+      default: false
+      prefix: '&8[&c&lO&b&lw&a&ln&e&le&6&lr&8] '
+      suffix: ''
+      rank: '7'
+      rank-ladder: admin
+    inheritance:
+    - co-owner
+    permissions:
+    - permissions.manage.membership.helper
+    - permissions.manage.membership.juniormoderator
+    - permissions.manage.membership.moderator
+    - permissions.manage.membership.seniormoderator
+    - permissions.manage.membership.junioradmin
+    - permissions.manage.membership.admin
+    - permissions.manage.membership.senioradmin
+    - permissions.manage.membership.co-owner  
+  juniordev:
+    options:
+      default: false
+      prefix: '&8[&5&lJunior &4&lDeveloper&8] '
+      suffix: ''
+      rank: '1'
+      rank-ladder: dev
+    inheritance:
+    - adminuser	
+    permissions:
+    - essentials.*
+    - -essentials.sudo
+    - -modifyworld.damage.deal.*
+    - -modifyworld.damage.take.*
+    - -modifyworld.mobtarget.*
+    - essentials.balance
+    - essentials.balance.others
+    - essentials.balancetop
+    - essentials.helpop
+    - essentials.home
+    - essentials.pay
+    - iConomy.holdings
+    - iConomy.payment
+    - iConomy.holdings.others
+    - essentials.sethome
+    - essentials.signs.use.buy
+    - essentials.signs.use.trade
+    - essentials.signs.use.sell
+    - essentials.tpa
+    - essentials.help
+    - essentials.msg
+    - essentials.chat
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.kit
+    - modifyworld.*
+    - serversigns.use
+    - referral.redeem
+    - referral.create
+    - referral.info
+    - -modifyworld.tame.*
+    - essentials.silentjoin
+    - -tcfactions.kit.fullplayer
+    - essentials.silentjoin.vanish
+    - -essentials.tempban.unlimited
+    - -essentials.antioch
+    - -essentials.nuke
+    - -essentials.break
+    - -essentials.exp.*
+    - -essentials.exp
+    - -essentials.firework
+    - -essentials.fly.others
+    - -essentials.gamemode.others
+    - -essentials.hat
+    - -essentials.heal.others
+    - -essentials.fly.others
+    - -essentials.god.others
+    - -essentials.*.others
+    - -essentials.book
+    - -essentials.ban
+    - -essentials.ban.*
+    - -essentials.*.exempt
+    - -essentials.*.offline
+    - -essentials.fireball
+    - -essentials.sudo.*
+    - -essentials.sudo
+    - -essentials.*.notify
+    - -essentials.*.preventmodify
+    - -essentials.tree
+    - -essentials.time.set
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build2:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build3:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build4:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      build5:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+      ownagetechgeek:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      muelthefox:
+        inheritance: []
+        permissions:
+        - -modifyworld.login
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  developer:
+    options:
+      default: false
+      prefix: '&8[&4&lDevel&c&loper&8] '
+      suffix: ''
+      rank: '2'
+      rank-ladder: dev
+    inheritance:
+    - juniordeveloper	
+    permissions:
+    - essentials.ban
+    - essentials.ban.offline
+  seniordeveloper:
+    options:
+      default: false
+      prefix: '&8[&a&lSenior &c&lDeveloper&8] '
+      suffix: ''
+      rank: '3'
+      rank-ladder: dev
+    inheritance:
+    - developer	
+    permissions:
+    - essentials.ban
+    - essentials.ban.offline
+    - essentials.sudo
+    - essentials.sudo.exempt
+  headdeveloper:
+    options:
+      default: false
+      prefix: '&8[&4&lHead &c&lDeveloper&8] '
+      suffix: ''
+      rank: '4'
+      rank-ladder: dev
+    inheritance:
+    - seniordeveloper	
+    permissions:
+    - permissions.manage.membership.juniordeveloper
+    - permissions.manage.membership.developer
+    - permissions.manage.membership.seniordeveloper
+  juniorbuilder:
+    options:
+      default: false
+      prefix: '&8[&5&lJunior &4&lBuilderer&8] '
+      suffix: ''
+      rank: '1'
+      rank-ladder: builder
+    inheritance:
+    - lord
+    permissions: []
+    worlds:
+      prison:
+        inheritance: []
+        permissions: []
+      purge:
+        inheritance: []
+        permissions: []
+      normaltcfactions:
+        inheritance: []
+        permissions: []
+      normaltcfactions_nether:
+        inheritance:
+        - normaltcfactions
+        permissions: []
+      normaltcfactions_the_end:
+        inheritance:
+        - normaltcfactions
+      optcfactions:
+        inheritance: []
+        permissions: []
+      optcfactions_nether:
+        inheritance:
+        - optcfactions
+        permissions: []
+      optcfactions_the_end:
+        inheritance:
+        - optcfactions  
+      hardcoretcfactions:
+        inheritance: []
+        permissions: []
+      hardcoretcfactions_nether:
+        inheritance:
+        - hardcoretcfactions
+        permissions: []
+      hardcoretcfactions_the_end:
+        inheritance:
+        - hardcoretcfactions     
+      weaktcfactions:
+        inheritance: []
+        permissions: []
+      weaktcfactions_nether:
+        inheritance:
+        - weaktcfactions
+        permissions: []
+      weaktcfactions_the_end:
+        inheritance:
+        - weaktcfactions  
+        permissions: []
+      ultrahardcoretcfactions:
+        inheritance: []
+        permissions: []
+      ultrahardcoretcfactions_nether:
+        inheritance:
+        - ultrahardcoretcfactions
+        permissions: []
+      ultrahardcoretcfactions_the_end:
+        inheritance:
+        - ultrahardcoretcfactions  
+        permissions: []
+      survival:
+        inheritance: []
+        permissions: []
+      survival_nether:
+        inheritance:
+        - survival
+        permissions: []
+      survival_the_end:
+        inheritance:
+        - survival
+        permissions: []
+      hardcore:
+        inheritance: []
+        permissions: []
+      hardcore_nether:
+        inheritance:
+        - hardcore
+        permissions: []
+      hardcore_the_end:
+        inheritance:
+        - hardcore  
+        permissions: []
+      anarchy:
+        inheritance: []
+        permissions: []
+      gta:
+        inheritance: []
+        permissions: []
+      ctf:
+        inheritance: []
+        permissions: []
+      skywars:
+        inheritance: []
+        permissions: []
+      skyblock:
+        inheritance: []
+        permissions: []
+      spleef:
+        inheritance: []
+        permissions: []
+      hungergames:
+        inheritance: []
+        permissions: []
+      bedwars:
+        inheritance: []
+        permissions: []
+      parkour:
+        inheritance: []
+        permissions: []
+      battlearenas:
+        inheritance: []
+        permissions: []
+      build1:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      build2:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      build3:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      build4:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      build5:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      creative:
+        inheritance: []
+        permissions: []
+      stafflounge:
+        inheritance: []
+        permissions: []
+      staffbuild:
+        inheritance: []
+        permissions:
+        - modifyworld.login
+        - worldedit.*
+        - essentials.gamemode
+        - essentials.fly
+      murdermystery:
+        inheritance: []
+        permissions: []
+      kingofthehill:
+        inheritance: []
+        permissions: []
+      dev1:
+        inheritance: []
+        permissions: []
+      ownagetechgeek:
+        inheritance: []
+        permissions: []
+      muelthefox:
+        inheritance: []
+        permissions: []
+      pserver:
+        inheritance: []
+        permissions: []
+      ecocraft:
+        inheritance: []
+        permissions: []
+      hub:
+        inheritance: []
+        permissions: []
+      kitpvp:
+        inheritance: []
+        permissions: []
+  builder:
+    options:
+      default: false
+      prefix: '&8[&4&lBuilder&8] '
+      suffix: ''
+      rank: '2'
+      rank-ladder: builder
+    inheritance:
+    - juniorbuilder
+    permissions: []
+  seniorbuilder:
+    options:
+      default: false
+      prefix: '&8[&a&lSenior &c&lBuilder&8] '
+      suffix: ''
+      rank: '3'
+      rank-ladder: builder
+    inheritance:
+    - builder
+    permissions: []
+  headbuidler:
+    options:
+      default: false
+      prefix: '&8[&4&lHead &c&lBuilder&8] '
+      suffix: ''
+      rank: '4'
+      rank-ladder: buidler
+    inheritance:
+    - seniorbuidler	
+    permissions:
+    - permissions.manage.membership.juniorbuilder
+    - permissions.manage.membership.builder
+    - permissions.manage.membership.seniorbuidler
+
+schema-version: 1
